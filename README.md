@@ -1,6 +1,6 @@
 ### Algorithmie
 
-Quelques excercices d'algorithmie en JavaScript.
+Quelques exercices d'algorithmie en JavaScript | 🐢
 
 ### Exercice  1 :  
 ## 1.1 consigne
