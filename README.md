@@ -125,7 +125,6 @@ Les deux mots [BONJOUR, BONJOUR] sont identiques
 
 ### Exercice  3 :  
 ## 3.1 consigne  
-Exercice 3:  
 Vous êtes développeur et vous devez créer un système de vérification des mots de passe.  
 Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, et un chiffre.  
 Écrivez un programme qui vérifie si un mot de passe donné respecte ces conditions.   
@@ -194,4 +193,49 @@ password {password: 'pass12', length: 6, isValid: false}
 *** Le mot passe doit contenir au moins 1 majuscule ***
 
 {password: 'dragon8ballZ', length: 12, isValid: true}
+```
+
+
+### Exercice  4 :  
+## 4.1 consigne  
+Vous organisez un concours où vous devez calculer le score moyen des participants. 
+Créez une fonction qui prend un tableau de scores et renvoie le score le plus élevé ainsi que le score moyen.  
+
+## 4.2 algorithme  
+Début  
+Lire le tableau des scores  
+Pour chaque score  
+si le score est > à max : affecter le score à max  
+cumuler les scores à somme  
+calculer la moyenne en divisant la somme par le nombre de scores  
+afficher le score max et la moyenne  
+Fin  
+
+## 4.3 code 
+```
+const calculScores = (scores) => {
+    let max = scores[0];
+    let somme = 0;
+    let moyenne = 0;
+
+    for (let i = 0; i <= scores.length - 1; i++) {
+        // max
+        if (max < scores[i]) max = scores[i];
+        // somme
+        somme += scores[i];
+    }
+    moyenne = somme / scores.length;
+
+    return {
+        scoreMax: max,
+        scoreMoyen: moyenne
+    }
+}
+
+console.log(calculScores([0, 10, 20, 30, 40, 50]));
+```
+
+## 4.4 résultat  
+``` 
+{scoreMax: 50, scoreMoyen: 25}
 ```
