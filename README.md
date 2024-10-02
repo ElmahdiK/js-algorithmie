@@ -2,8 +2,51 @@
 
 Quelques excercices d'algorithmie en JavaScript.
 
-Exercice  1 :  
+### Exercice  1 :  
+## 1.1 consigne
 Vous organisez un concours de dev où chaque participant a trois épreuves. Selon la moyenne des scores, attribuez les niveaux suivants :  
 Moins de 50 : "Débutant"  
 Entre 50 et 70 : "Intermédiaire"  
 Plus de 70 : "Expert"  
+
+## 1.2 algorithme
+Début  
+Lire les 3 notes d'épreuves de chaque participant  
+Pour chaque participant, calculer sa moyenne  
+Si la moyenne est < à 50 afficher : "Débutant"  
+Si la moyenne est entre 50 et 70 afficher : "Intermédiaire"  
+Si la moyenne est > à 70 afficher : "Expert"  
+Fin  
+
+## 1.3 code 
+```
+const NIVEAUX = ["Débutant", "Intermédiaire", "Expert"];
+const getNiveau = (moyenne) => {
+    if (moyenne < 50) return NIVEAUX[0];
+    else if (moyenne >= 50 && moyenne <= 70) return NIVEAUX[1];
+    else return NIVEAUX[2];
+}
+
+// résultats des épreuves
+const RESULTATS = [[10, 20, 45], [50, 65, 80], [90, 95, 100]];
+let moyenne = 0;
+let somme = 0;
+
+// pour chaque participant
+for (let participant in RESULTATS) {
+    somme = 0;
+    // on calcul la somme des résultats obtenus
+    for (let note in RESULTATS[participant]) {
+        somme += RESULTATS[participant][note];
+    }
+    // on calcul la moyenne
+    moyenne = somme / RESULTATS[participant].length;
+    console.log(`Le participant ${participant} a une moyenne de : ${moyenne} => ${getNiveau(moyenne)}`)
+}
+```
+## 1.4 résultat  
+--  
+Le participant 0 a une moyenne de : 25 => Débutant  
+Le participant 1 a une moyenne de : 65 => Intermédiaire  
+Le participant 2 a une moyenne de : 95 => Expert  
+--

@@ -11,11 +11,17 @@ Début
 Lire les 3 notes d'épreuves de chaque participant
 Pour chaque participant, calculer sa moyenne
 Si la moyenne est < à 50 afficher : "Débutant"
-Si la moyenne est entre 50 et 70 afficher : "Débutant"
+Si la moyenne est entre 50 et 70 afficher : "Intermédiaire"
 Si la moyenne est > à 70 afficher : "Expert"
 Fin
 --- --- ---
 */
+const NIVEAUX = ["Débutant", "Intermédiaire", "Expert"];
+const getNiveau = (moyenne) => {
+    if (moyenne < 50) return NIVEAUX[0];
+    else if (moyenne >= 50 && moyenne <= 70) return NIVEAUX[1];
+    else return NIVEAUX[2];
+}
 
 window.onload = _ => {
     console.log("page loaded");
@@ -38,10 +44,4 @@ window.onload = _ => {
     }
 }
 
-const NIVEAUX = ["Débutant", "Intermédiaire", "Expert"];
-const getNiveau = (moyenne) => {
-    if (moyenne < 50) return NIVEAUX[0];
-    else if (moyenne >= 50 && moyenne <= 70) return NIVEAUX[1];
-    else return NIVEAUX[2];
-}
 
