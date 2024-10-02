@@ -174,7 +174,7 @@ console.log(isValidPassword("dragon8ballZ"));
 ```
 
 ## 3.4 résultat  
-'''
+```
 {password: 'dragon8ballZ', length: 12}
-'''
+```
 true
