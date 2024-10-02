@@ -1,6 +1,6 @@
 /*
 --- --- ---
-Exercice :
+Exercice 2 :
 1. Demandez a l'utilisateur de saisir deux mots.
 2. Convertissez les deux mots en majuscules.
 3. Comparez les deux mots (en ignorant les espaces supplementaires) et indiquez s'ils sont identiques.
